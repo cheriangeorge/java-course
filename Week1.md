@@ -27,4 +27,6 @@
 - It is like a stack - elements of the stack are activation records - each activation record will have specified fields - 
 - bottom of the stack will be main and then on top of it func2 - stack is LIFO - 
 - Local variables and parameters are part of the Activation record
-- ' Return Link ' of func2 will be given to main
+- **' Return Link '** of func2 will be given to main. It is a pointer. Points to memory location which stores the return value.
+- **' Control Link '** if main is calling func2. func2's control link will point to main ; Control link points to caller's activation record.
+- When converting HLL to LLL just before the last step, the memory location is added to the program code (this is the penultimate step)
