@@ -19,7 +19,7 @@
 
 ### Scope vs Lifetime
 - If a variable is in scope then it is available for use
-- Even if a variable is alive it need not be in scope
+- Even if a variable is alive it need not be in scope - A variable's lifetime may have certain points in time when it is not in scope.
 
 ### Activation Record
 - While invoking a funciton the local variables will be stored in activation record
@@ -31,3 +31,5 @@
 - **' Control Link '** if main is calling func2. func2's control link will point to main ; Control link points to caller's activation record.
 - When converting HLL to LLL just before the last step, the memory location is added to the program code (this is the penultimate step)
 - If a variable is in activation record then it is in its scope : FALSE. If main is calling func2, the local variable in main is in its activation record but not in scope. 
+
+
