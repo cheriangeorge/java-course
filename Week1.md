@@ -6,6 +6,8 @@
 - JIT compilers are between the two and more efficient
 
 ### Imperative vs Declarative:
+- Imperative and procedural are same
+- Declerative and functional are the same 
 
 
 ### Role of Data types in programming languages
