@@ -64,3 +64,8 @@
 - Deque is a subtype of stack and queue 
 - Stack and queue inherit from deque
 
+- Classes are abstract data types 
+- Class has private implementation and public interface
+
+- Java is statically typed
+- Python is dynamically typed
