@@ -30,3 +30,4 @@
 - **' Return Link '** of func2 will be given to main. It is a pointer. Points to memory location which stores the return value.
 - **' Control Link '** if main is calling func2. func2's control link will point to main ; Control link points to caller's activation record.
 - When converting HLL to LLL just before the last step, the memory location is added to the program code (this is the penultimate step)
+- If a variable is in activation record then it is in its scope : FALSE. If main is calling func2, the local variable in main is in its activation record but not in scope. 
