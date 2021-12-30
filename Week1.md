@@ -33,9 +33,19 @@
 - If a variable is in activation record then it is in its scope : FALSE. If main is calling func2, the local variable in main is in its activation record but not in scope. 
 
 ### Memory
-- Heap is freely available memory. Memory from heap is pushed into stack
+- Heap is free pool of memory given to your program to store your variables. Memory from heap is pushed into stack
 - The variables visible to you belong to the top of the stack . These are the ones in scope.
 - Memory management is automatic in a stack. When the function ends all the activation records are cleared.
 - If there is no base case for a recursion the stack will go on eating the heap and then finally will give a stack overflow error.
 - Dynamic / Run time memory allocation happens for Heaps. 
+- Any allocation in the Heap is called unnamed memory
+- For each allocation in the Heap we keep a handler in the stack that stores the reference.
 
+### Call by value vs call by reference
+- Call by reference is pointing to the original memory location
+
+### Explicit memory deallocation vs automatic garbage collection
+- Automatic garbage collection is error prone - FALSE
+- Memory leakage can happen in explicit memory deallocation - TRUE
+- As a programmer, if you do an allocation on the heap it is your responsibility to clear it.
+- Garbage collector finds memory that doesn't have a reference and cleares it.
