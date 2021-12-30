@@ -32,4 +32,10 @@
 - When converting HLL to LLL just before the last step, the memory location is added to the program code (this is the penultimate step)
 - If a variable is in activation record then it is in its scope : FALSE. If main is calling func2, the local variable in main is in its activation record but not in scope. 
 
+### Memory
+- Heap is freely available memory. Memory from heap is pushed into stack
+- The variables visible to you belong to the top of the stack . These are the ones in scope.
+- Memory management is automatic in a stack. When the function ends all the activation records are cleared.
+- If there is no base case for a recursion the stack will go on eating the heap and then finally will give a stack overflow error.
+- Dynamic / Run time memory allocation happens for Heaps. 
 
