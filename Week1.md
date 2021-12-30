@@ -8,7 +8,8 @@
 ### Imperative vs Declarative:
 - Imperative and procedural are same
 - Declerative and functional are the same 
-
+- These are programming styles not languages. 
+- You can do both ways in the same program
 
 ### Role of Data types in programming languages
 
