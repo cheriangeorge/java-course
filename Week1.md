@@ -49,3 +49,18 @@
 - Memory leakage can happen in explicit memory deallocation - TRUE
 - As a programmer, if you do an allocation on the heap it is your responsibility to clear it.
 - Garbage collector finds memory that doesn't have a reference and cleares it.
+
+### Interface vs Specification
+- Interface : What is visible to other components.
+- Specification : Intended input output behaviour.
+
+### Features of OOP
+- Abstraction
+- Inheritance
+- Subtyping
+- Dynamic lookup
+
+### Stack , Queue
+- Deque is a subtype of stack and queue 
+- Stack and queue inherit from deque
+
