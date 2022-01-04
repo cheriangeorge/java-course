@@ -14,4 +14,4 @@ public class helloworld{
 * Specify input and output types for main()
   - The signature of main()
   - **String[] args** Input parameter is an array of strings; command line arguments 
-  - **void** No output, so return type
+  - **void** No output, so return type. Implicit return type of main is int
