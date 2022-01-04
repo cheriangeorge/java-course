@@ -15,3 +15,10 @@ public class helloworld{
   - The signature of main()
   - **String[] args** Input parameter is an array of strings; command line arguments 
   - **void** No output, so return type. Implicit return type of main is int
+
+###
+* Strings are fixed immutable **objects** - Any function to modify a string returns a new string. **name1.concat(name2)** creates a new string. Strings are not an array of characters.
+* For a variable if you use final it cannot be reassigned.
+* String - length method 
+* Character must be single quoted 
+* 
