@@ -28,6 +28,6 @@ public class helloworld{
 #### Short circuit operations 
 * Among logical operators Not has heighst precedence followed by And (If the left side operand is False the result is always False. Only if it is true need to check the right side.)
 
-
+#### Additional Discussion Points
 * Code motion in Compiler optimisation 
   - Loop unrolling . String.length is not recomputed in every iteration.
