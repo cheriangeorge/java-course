@@ -1,3 +1,5 @@
+## Week 1 Notes 
+
 ### Compiler vs Interpreter:
 - Compiler needs entire program to be loaded in RAM while interpreter loads just one line into buffer
 - Compiler is faster than interpreter 
