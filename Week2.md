@@ -1,3 +1,5 @@
+## Week 2 Notes 
+
 ### Java Syntax 
 
 ```Java
