@@ -1,11 +1,17 @@
 ## Week 1 Notes 
 
 ### Compiler vs Interpreter:
-- Compiler needs entire program to be loaded in RAM while interpreter loads just one line into buffer
-- Compiler is faster than interpreter 
-- Memory requirement for interpreter is very low (Usually used in memory constrained devices)
-- Explore : Which runs faster - Compiled code or interpreted code ? 
-- JIT compilers are between the two and more efficient
+* Compiler needs entire program to be loaded in RAM while interpreter loads just one line into buffer
+* Compiler is faster than interpreter 
+* Memory requirement for interpreter is very low (Usually used in memory constrained devices)
+* Explore : Which runs faster - Compiled code or interpreted code ? 
+* Speed of Execution in a compiler and interpreter
+  - Compiler can do a lot more optimization than a normal interpreter can do. Interpreter doesn't have the full view of the code. Full view of the code helps to do a lot more optimisation 
+  - Some interpreters do some amount of compilation in it (Java JIT compiler)
+  - Full view of the code helps in different types of optimisation - 1) Code motion 2) Register Allocation (varible folding) 3) Constant Propogation 4) Dead Code Elimination  
+* **Just In Time (JIT) compilers** are between the two and more efficient
+  - Also called Run Time Compiler (oxymoron)
+  - Module of interpreter marks lines that are executed multiple times. Only this part of the code is compiled once. The interpreter will just run this compiled code.
 
 ### Imperative vs Declarative:
 - Imperative and procedural are same
