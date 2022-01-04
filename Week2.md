@@ -25,5 +25,5 @@ public class helloworld{
 * Character must be single quoted 
 * final needs to always be initialised. 
 * if and switch are conditional statements
-
+### Short circuit operations 
 * Among logical operators Not has heighst precedence followed by And (If the left side operand is False the result is always False. Only if it is true need to check the right side.)
