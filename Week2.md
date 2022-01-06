@@ -44,8 +44,12 @@ public class helloworld{
   - `java helloworld` interprets and runs bytecode in `helloworld.class`
   - java should not be given .class extention.
 ### Basic Datatpes in JAVA
-* Scalar types 
-
+* **Scalar types** 
+  - In an object-oriented language, all data should be encapsulated as objects. However , this is cumbersome
+  - Useful to manipulate numeric values like conventional languages
+  - Java has eight primitive scalar types
+  - Size of each type is fixed by JVM. Does not depend on native architecture.
+  - 2-byte char for Unicode.
 
 |  Type | Size in Bytes  |
 |---|---|
@@ -58,6 +62,37 @@ public class helloworld{
 | char  | 2  |
 | boolean  | 1  |
 
+
+* **Declarations, assigning values**
+  - We declare variables before we use them
+  - The assignment statement works as usual
+  - Characters are written with single-quotes (only)
+  - Double quotes denote strings
+  - Boolean constants are true, false
+```java
+int x, y;
+double y;
+char c;
+boolean b1, b2;
+```
+```java
+int x,y;
+x = 5;
+y = 7;
+```
+```java
+char c,d;
+c = ’x’;
+d = ’\u03C0’; // Greek pi, unicode
+```
+```java
+boolean b1, b2;
+b1 = false;
+b2 = true;
+```
+* **Initialization, constants**
+  - Declarations can come anywhere. However, Use this judiciously to retain readability.
+  - 
 ### From Activity Questions 
 * Strings are fixed immutable **objects** - Any function to modify a string returns a new string. **name1.concat(name2)** creates a new string. Strings are not an array of characters.
 * For a variable if you use final it cannot be reassigned.
