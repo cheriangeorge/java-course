@@ -303,8 +303,32 @@ public class helloworld{
       ```
       - loop variable must be declared in local scope for this version of `for`
 * **Multiway Branching**
-  - 
-    
+  - `switch` selects between different options
+  - default is to *“fall through”* from one case to the next
+    - Need to explicitly `break` out of switch
+    - `break` available for loops as well
+  - Options have to be constants. Cannot use conditional expressions 
+  - here return type is `void`
+    - `Non-void` return type requires an appropriate return value
+  - Example :
+    ```java
+    public static void printsign(int v) {
+      switch (v) {
+        case -1: {
+          System.out.println("Negative");
+          break;
+        }
+        case 1: {
+          System.out.println("Positive");
+          break;
+        }
+        case 0: {
+          System.out.println("Zero");
+          break;
+        }
+      }
+    }
+    ```
 
 
 ### From Activity Questions 
