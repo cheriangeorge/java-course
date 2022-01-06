@@ -183,6 +183,130 @@ public class helloworld{
     a = new int[n];
     a = {2, 3, 5, 7, 11};
     ```
+### Control Flow in JAVA
+* **Control Flow**
+  - Program layout
+    - Statements end with semi-colon
+    - Blocks of statements delimited by braces
+  - Conditional execution
+    - `if (condition) { ... } else { ... }`
+  - Conditional loops
+    - `while (condition) { ... }`
+    - `do { ... } while (condition)`
+  - Iteration
+    - Two kinds of `for`
+  - Multiway branching – `switch`
+* **Conditional Execution**
+  - `if (c) {...} else {...}`
+    - `else` is optional
+    - Condition must be in parentheses
+    - If body is a single statement, braces are not needed
+  - No elif, like Python
+    - Indentation is not forced
+    - Just align else if
+    - Nested if is a single statement, no separate braces required
+  - No def for function definition
+    ```java
+    public class MyClass {
+    ...
+    public static int sign(int v) {
+      if (v < 0) {
+        return(-1);
+      } else if (v > 0) {
+        return(1);
+      } else {
+        return(0);
+      }
+     }
+    }
+    ```
+* **Conditional Loops**
+  - `while (c) {...}`
+    - Condition must be in parentheses
+    - If body is a single statement, braces are not needed
+  - `do {...} while (c)` 
+    - Condition is checked at the end of the loop
+    - At least one iteration
+    - Useful for interactive user input
+      ```java
+        do {
+          read input;
+        } while (input-condition);
+      ```
+   - Example
+    ```java
+    public class MyClass {
+    ...
+      public static int sumupto(int n) {
+        int sum = 0;
+        int i = 0;
+        
+        do {
+          sum += i;
+          i++;
+        } while (i <= n);
+        
+        return(sum);
+        
+       }
+      }
+    ```
+* **Iteration**
+  - for loop is inherited from C
+  - `for (init; cond; upd) {...}`
+    - init is initialization
+    - cond is terminating condition
+    - upd is update
+  - Intended use is `for(i = 0; i < n; i++){...}`
+  - Completely equivalent to
+    ```java
+    i = 0;
+    while (i < n) {
+      i++;
+    }
+    ```
+  - However, not good style to write `for` instead of `while`
+  - Can define loop variable within loop
+    - The scope of `i` is local to the loop
+    - *An instance of more general local scoping allowed in Java*
+  - Example :
+    ```java`
+    public class MyClass {
+      ...
+      public static int sumarray(int[] a) {
+        int sum = 0;
+        int n = a.length;
+        int i;
+        // one method
+        for (i = 0; i < n; i++){
+          sum += a[i];
+        }
+        // another method
+        for (int v : a){
+          sum += v;
+        }
+        return(sum);
+        }
+        }
+    ```
+  - Iterating over elements directly **ALTERNATE SYNTAX**
+    - Java later introduced a for in the style of Python
+      ```java
+      for x in l:
+        do something with x
+      ```
+    - Another `for` syntax
+      ```java
+      for (type x : a)
+        do something with x;
+      }
+      ```
+      - loop variable must be declared in local scope for this version of `for`
+* **Multiway Branching**
+  - 
+    
+
+
 ### From Activity Questions 
 * Strings are fixed immutable **objects** - Any function to modify a string returns a new string. **name1.concat(name2)** creates a new string. Strings are not an array of characters.
 * For a variable if you use final it cannot be reassigned.
