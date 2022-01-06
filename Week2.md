@@ -234,23 +234,23 @@ public class helloworld{
         } while (input-condition);
       ```
    - Example
-    ```java
-    public class MyClass {
-    ...
-      public static int sumupto(int n) {
-        int sum = 0;
-        int i = 0;
+      ```java
+      public class MyClass {
+      ...
+       public static int sumupto(int n) {
+         int sum = 0;
+          int i = 0;
+          
+          do {
+            sum += i;
+           i++;
+          } while (i <= n);
         
-        do {
-          sum += i;
-          i++;
-        } while (i <= n);
+          return(sum);
         
-        return(sum);
-        
-       }
-      }
-    ```
+        }
+        }
+      ```
 * **Iteration**
   - for loop is inherited from C
   - `for (init; cond; upd) {...}`
@@ -270,7 +270,7 @@ public class helloworld{
     - The scope of `i` is local to the loop
     - *An instance of more general local scoping allowed in Java*
   - Example :
-    ```java`
+    ```java
     public class MyClass {
       ...
       public static int sumarray(int[] a) {
