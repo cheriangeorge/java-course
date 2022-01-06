@@ -43,9 +43,13 @@ public class helloworld{
   - Sufficient to trigger compilation for class containing main()
   - `java helloworld` interprets and runs bytecode in `helloworld.class`
   - java should not be given .class extention.
-### Basic Datatpes in JAVA
+### Basic Datatypes in JAVA
+* Java is a **strongly typed language**
+  - statically typed - once defined cannot change
+  - Constraints - In java `if(5){System.out.println("test");}` won't work - nothing other than boolean comparisons in conditional statements
 * **Scalar types** 
   - In an object-oriented language, all data should be encapsulated as objects. However , this is cumbersome
+  - Java allows scalar types, which are not objects
   - Useful to manipulate numeric values like conventional languages
   - Java has eight primitive scalar types
   - Size of each type is fixed by JVM. Does not depend on native architecture.
@@ -65,34 +69,120 @@ public class helloworld{
 
 * **Declarations, assigning values**
   - We declare variables before we use them
+    ```java
+    int x, y;
+    double y;
+    char c;
+    boolean b1, b2;
+    ```
   - The assignment statement works as usual
+    ```java
+    int x,y;
+    x = 5;
+    y = 7;
+    ```
+  - Declarations can include initializations
   - Characters are written with single-quotes (only)
-  - Double quotes denote strings
+    ```java
+    char c,d;
+    c = ’x’;
+    d = ’\u03C0’; // Greek pi, unicode
+    ```
+  - Double quotes denote strings  
   - Boolean constants are true, false
-```java
-int x, y;
-double y;
-char c;
-boolean b1, b2;
-```
-```java
-int x,y;
-x = 5;
-y = 7;
-```
-```java
-char c,d;
-c = ’x’;
-d = ’\u03C0’; // Greek pi, unicode
-```
-```java
-boolean b1, b2;
-b1 = false;
-b2 = true;
-```
+    ```java
+    boolean b1, b2;
+    b1 = false;
+    b2 = true;
+    ```
+
 * **Initialization, constants**
   - Declarations can come anywhere. However, Use this judiciously to retain readability.
-  - 
+    ```java
+    int x;
+    x = 10;
+    double y;
+    ```
+  - Initialize at time of declaration
+    ```java
+    int x = 10;
+    double y = 5.7f;
+    // Note: Append f after number for float, else interpreted as double
+    ```
+  - Can we declare a value to be a constant?
+    ```java
+    float pi = 3.1415927f;
+    pi = 22/7; // Disallow?
+    // Modifier final indicates a constant
+    final float pi = 3.1415927f;
+    pi = 22/7; // Flagged as error;
+    ```
+* **Operators, shortcuts, type casting**
+  - Arithmetic operators are the usual ones
+    `+`,`-`,`*`,`/`,`%`
+  - **No** separate integer division operator `//`
+  - When both arguments are integer, `/` is integer division 
+    ```java
+    float f = 22/7; // Value is 3.0
+    // Note implicit conversion from int to float
+    ```
+  - No exponentiation operater, use `Math.pow()`
+    `Math.pow(a,n)` returns a^n
+  - Special operators for incrementing and decrementing integers
+    ```java
+    int a = 0, b = 10;
+    a++; // Same as a = a+1
+    b--; // Same as b = b-1
+    ```
+  - Shortcut for updating a variable
+    ```java
+    int a = 0, b = 10;
+    a += 7; // Same as a = a+7
+    b *= 12; // Same as b = b*12
+    ```
+#### Strings and arrays are objects in JAVA
+* **Strings** 
+  - String is a built in class
+    `String s,t;`
+  - String constants enclosed in double quotes
+    `String s = "Hello", t = "world";`
+  - `+` is overloaded for string concatenation
+    ```java
+    String s = "Hello";
+    String t = "world";
+    String u = s + " " + t; // "Hello world"
+    ```
+  - Strings are not arrays of characters
+    Cannot write `s[3] = ’p’;` or `s[4] = ’!’;`
+  - Instead, invoke method substring in class String
+    `s = s.substring(0,3) + "p!";`
+  - If we change a String, we get a new object
+    - After the update, s points to a new String
+    - Java does automatic garbage collection
+* **Arrays** 
+  - Arrays are also objects
+  - Typical declaration
+    ```java
+    int[] a;
+    a = new int[100];
+    ```
+    - Or `int a[]` instead of `int[] a`
+    - Combine as `int[] a = new int[100];`
+  - `a.length` gives size of a
+    - Note, for String, it is a method `s.length()!`
+  - Array indices run from 0 to `a.length-1`
+  - Size of the array can vary
+  - Array constants: `{v1, v2, v3}`
+  - For example
+    ```java
+    int[] a;
+    int n;
+    n = 10;
+    a = new int[n];
+    n = 20;
+    a = new int[n];
+    a = {2, 3, 5, 7, 11};
+    ```
 ### From Activity Questions 
 * Strings are fixed immutable **objects** - Any function to modify a string returns a new string. **name1.concat(name2)** creates a new string. Strings are not an array of characters.
 * For a variable if you use final it cannot be reassigned.
