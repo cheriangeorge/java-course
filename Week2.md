@@ -196,3 +196,4 @@ public class helloworld{
 #### Additional Discussion Points
 * Code motion in Compiler optimisation 
   - Loop unrolling . String.length is not recomputed in every iteration.
+* JAVA has call-by-vale only. Not call-by-reference.
