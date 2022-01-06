@@ -43,6 +43,20 @@ public class helloworld{
   - Sufficient to trigger compilation for class containing main()
   - `java helloworld` interprets and runs bytecode in `helloworld.class`
   - java should not be given .class extention.
+### Basic Datatpes in JAVA
+* Scalar types 
+
+
+|  Type | Size in Bytes  |
+|---|---|
+| int  | 4  |
+| long  | 8  |
+| short  | 2  |
+| byte  |  1 |
+| float  | 4  |
+| double  | 8  |
+| char  | 2  |
+| boolean  | 1  |
 
 ### From Activity Questions 
 * Strings are fixed immutable **objects** - Any function to modify a string returns a new string. **name1.concat(name2)** creates a new string. Strings are not an array of characters.
