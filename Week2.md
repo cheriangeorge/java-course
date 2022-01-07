@@ -388,8 +388,58 @@ public class helloworld{
           }
         }
       ```
-   
-
+* **Initializing Objects**
+  - Good to set up an object when we create it
+    - Combine `new Date()` and `setDate()`
+  - ***Constructors*** — special functions called when an object is created
+    - Function with the same name as the class
+    - `d = new Date(13,8,2015);`
+        ```java
+          public class Date {
+            private int day, month, year;
+            public Date(int d, int m, int y){
+              day = d;
+              month = m;
+              year = y;
+            }
+            // Constructor with different signature
+            public Date(int d, int m){
+              day = d; month = m; year = 2021;
+            }
+          }
+        ```
+     - Constructors with different signatures
+       - `d = new Date(13,8);` sets year to 2021
+       - Java allows function overloading — same name, different signatures (Python: default (optional) arguments, no overloading)
+     - A later constructor can call an earlier one using `this` . For Example in the code above the following block could be used.
+        ```java
+          public Date(int d, int m){
+            this(d,m,2021);
+          }
+        ```
+     - If no constructor is defined, Java provides a default constructor with empty arguments
+        - `new Date()` would implicitly invoke this
+        - Sets instance variables to sensible defaults
+        - For instance, int variables set to 0
+        - Only valid if *no constructor* is defined
+        - Otherwise need an explicit constructor without arguments
+* **Copy constructors**
+  - Create a new object from an existing one
+  - Copy constructor takes an object of the same type as argument
+    - Copies the instance variables
+    - Use object name to disambiguate which instance variables we are talking about
+    - Note that private instance variables of argument are visible
+      ```java
+        public void UseDate() {
+          Date d1,d2;
+          d1 = new Date(12,4,1954);
+          d2 = new Date(d1); //Copy constructor
+        }
+      ```
+   - ***Shallow copy vs deep copy***
+      - Want new object to be disjoint from old one
+      - If instance variable are objects, we may end up aliasing rather than copying
+      - cloning objects (Explore further)
 
 ### From Activity Questions 
 * Strings are fixed immutable **objects** - Any function to modify a string returns a new string. **name1.concat(name2)** creates a new string. Strings are not an array of characters.
