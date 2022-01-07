@@ -440,7 +440,38 @@ public class helloworld{
       - Want new object to be disjoint from old one
       - If instance variable are objects, we may end up aliasing rather than copying
       - cloning objects (Explore further)
-
+### Basic Input and Output in JAVA
+* **Interacting with a JAVA program**
+  - Print data using `System.out.println("hello, world");`
+  - Simplest to use is the `Console` class
+    - Functionality similar to Python
+  - Defined within System
+    - Two methods, `readLine` and `readPassword`
+    - `readPassword` does not echo characters on the screen
+    - `readLine` returns a string (like Python input())
+    - `readPassword` returns an array of char — for security reasons
+  - Example :
+    ```java
+     Console cons = System.console();
+     String username = cons.readLine("User name: ");
+     char[] passwd = cons.readPassword("Password: ");
+    ```
+  - More general `Scanner` class
+    - Allows more granular reading of input
+    - Read a full line, or read an integer, . . .
+    - Example
+      ```java
+        Scanner in = new Scanner(System.in);
+        String name = in.nextLine();
+        int age = in.nextInt();
+        ...
+      ```
+   - **Generating output**
+      - `System.out.println(arg)` prints arg and goes to a new line
+          - Implicitly converts argument to a string
+      - `System.out.print(arg)` is similar, but does not advance to a new line
+      - `System.out.printf(arg)` generates formatted output
+          - Same conventions as printf in C
 ### From Activity Questions 
 * Strings are fixed immutable **objects** - Any function to modify a string returns a new string. **name1.concat(name2)** creates a new string. Strings are not an array of characters.
 * For a variable if you use final it cannot be reassigned.
