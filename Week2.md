@@ -353,6 +353,42 @@ public class helloworld{
 * **Creating objects**
   - Declare type using class name
   - `new` creates a new object
+    ```java
+      public void UseDate() {
+        Date d;
+        d = new Date();
+        ...
+      }
+    ```
+  - methods to update values ***Mutator Methods***
+    - `this` is a reference to current object
+    - Can omit `this` if reference is unambiguous
+      ```java
+        public class Date {
+          private int day, month, year;
+          public void setDate(int d, int m,int y){
+            this.day = d;
+            this.month = m;
+            this.year = y;
+          }
+        }
+      ```
+  - Methods to read and report values ***Accessor Methods***
+      ```java
+        public class Date {
+          ...
+          public int getDay(){
+            return(day);
+          }
+          public int getMonth(){
+            return(month);
+          }
+          public int getYear(){
+            return(year);
+          }
+        }
+      ```
+   
 
 
 ### From Activity Questions 
