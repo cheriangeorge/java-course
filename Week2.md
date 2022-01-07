@@ -329,6 +329,30 @@ public class helloworld{
       }
     }
     ```
+### Defining classes and objects in Java
+* A class is a template for an encapsulated type
+* An object is an instance of a class
+* **Defining a class**
+  - Definition block using class, with class name
+    - Modifier `public` to indicate visibility
+    - Java allows `public` to be omitted
+    - Default visibility is public to `package`
+    - Packages are administrative units of code
+    - All classes defined in same directory form part of same package
+  - Example
+      ```java
+        public class Date {
+          private int day, month, year;
+          ...
+        }
+      ```
+  - Instance variables
+    - Each concrete object of type `Date` will have local copies of `date`, `month`, `year`
+    - These are marked `private`
+    - Can also have `public` instance variables, but breaks encapsulation
+* **Creating objects**
+  - Declare type using class name
+  - `new` creates a new object
 
 
 ### From Activity Questions 
