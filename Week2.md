@@ -66,6 +66,11 @@ public class helloworld{
 | char  | 2  |
 | boolean  | 1  |
 
+   - The sizes are in pairs 
+      - boolean and byte are 1 byte
+      - short and char are 2 bytes
+      - int and float are 4 bytes 
+      - double and long are 8 bytes
 
 * **Declarations, assigning values**
   - We declare variables before we use them
