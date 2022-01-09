@@ -69,7 +69,7 @@ public class helloworld{
    - The sizes are in pairs 
       - boolean and byte are 1 byte
       - short and char are 2 bytes
-      - int and float are 4 bytes 
+      - int and float are 4 bytes (The total value an int can hold in Java is 2^32 (2 to the power of 32, in other words a 32 bit number), for which half is reserved for negative numbers and half for positive numbers.)
       - double and long are 8 bytes
 
 * **Declarations, assigning values**
