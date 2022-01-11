@@ -145,4 +145,55 @@
     - `int[] a = new int[100];`
   - One can now presumably write
     - `Employee[] e = new Manager(...)[100]`
+
+### Dynamic dispatch and polymorphism
+* Subclasses and inheritance
+  - A subclass extends a parent class
+  - Subclass inherits instance variables and methods from the parent class
+  - Subclasses cannot see private components of parent class
+  - Subclass can add more instance variables and methods
+  - Can also override methods
+    ```java
+      public class Employee{
+        private String name;
+        private double salary;
+        public boolean setName(String s){ ... }
+        public boolean setSalary(double x){ ... }
+        public String getName(){ ... }
+        public double getSalary(){ ... }
+        
+        public double bonus(float percent){
+          return (percent/100.0)*salary;
+        }
+      }
+      public class Manager extends Employee{
+        private String secretary;
+        public boolean setSecretary(name s){ ... }
+        public String getSecretary(){ ... }
+      }
+    ```
+* Dynamic dispatch
+  - `Manager` can redefine `bonus()`
+      ```java
+        double bonus(float percent){
+          return 1.5*super.bonus(percent);
+        }
+      ```
+    - Uses parent class `bonus()` via `super`
+    - **Overrides** definition in parent class
+  - Consider the following assignment
+    - `Employee e = new Manager(...)`
+  - Can we invoke e.setSecretary()?
+    - e is declared to be an Employee
+    - Static typechecking — e can only refer to methods in Employee
+  - What about e.bonus(p)? Which bonus() do we use?
+    - Static: Use Employee.bonus()
+    - Dynamic: Use Manager.bonus()
+  - Dynamic dispatch (dynamic binding, late method binding, . . . ) turns out to be more useful
+    - Default in Java, optional in languages like C++ (virtual function)
+* Polymorphism
+  - Every `Employee` in `emparray` “knows” how to calculate its bonus correctly!
+
+# From Activity session
 * final keyword for variable makes it immutable , method , class makes it uninheritable
+
