@@ -196,4 +196,10 @@
 
 # From Activity session
 * final keyword for variable makes it immutable , method , class makes it uninheritable
+* Access Specifiers in Java
+  - public
+  - protected
+  - default
+  - private
+* Packages - Like a directory or subfolder where we have a collection of classes interfaces and sub packages.
 
