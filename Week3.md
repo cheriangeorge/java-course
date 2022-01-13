@@ -202,4 +202,6 @@
   - default - within same package
   - private - within same class
 * Packages - Like a directory or subfolder where we have a collection of classes interfaces and sub packages.
-
+* Whenever you are overriding you cannot reduce the visibility. (Public cannot become private)
+* Overloading is having multiple functions of same name but different signature. Return type does not matter. Number/Type or arrangement of arguments should be different
+* In Overriding return type matters . In overriding , it should have same return type or more specific return type.
